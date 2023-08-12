@@ -37,5 +37,30 @@
 |关联远程仓库|git remote add origin + ssh url|<div>git remote add origin git@github.com:Charles-XuXingchen/LearningGit.git</div><div><br></div>|
 |本地推送到远程|git push -u origin + 分支名|git push -u origin master|
 
+### 分支操作
+
+|描述|命令|实例|
+|:---|:---|:---|
+|查看分支|git branch||
+|创建分支|git branch + 分支名|git branch slave|
+|切换分支|git checkout + 分支名|git checkout slave|
+|重命名分支|git branch -m + 分支名|git branch -m temp|
+|删除分支|git branch -d + 分支名|git branch -d temp|
+|比较主分支和子分支|git diff + 子分支名|git diff temp|
+|合并子分支到主分支|git merge + 子分支名|git merge temp|
+
+### 标签操作
+
+|描述|命令|实例|
+|:---|:---|:---|
+|查看标签|git tag ||
+|添加标签|git tag + 标签名|git tag v1.0|
+|删除本地标签|git tag -d + 标签名|git tag -d v1.0|
+|本地标签推送到远程|git push origin master + 标签名|git push origin master v1.0|
+|删除远程标签|git push origin master :refs/tags/标签名|git push origin master :refs/tags/v1.0|
+|查看某个标签的详细信息|git show + 标签名|git show v1.0|
+|首先查看历史提交的各commit_id| git log --oneline||
+|给忘记创建标签的历史提交创建标签|git tag -a 版本号 commit_id -m '版本号'|git tag -a v0.5 9c5f294 -m 'v0.5'|
+
 ### 持续更新
 
